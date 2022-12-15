@@ -116,7 +116,7 @@ Press 5 for Sum of Numbers:
 Press 6 for Subtract Numbers:
 Press 7 for Multiply Numbers:
 Press 8 for Divide Numbers:
-Press 9 for Decimal Fraction:
+Press 9 for Convert to Percentage:
 Press 10 to check Date and Time:
 ''')
 while True:
