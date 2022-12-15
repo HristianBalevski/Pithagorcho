@@ -100,7 +100,7 @@ def divide(num1, num2):
 def convert_to_percent(n1, n2):
 
     if n1 >= n2 or n1 <= 0 or n2 <= 0:
-        print('Wrong Input!')
+        invalid_input()
     else:
         result = ((n1 * 25) / (n2 * 25)) * 100
         print(f'{result}%')
