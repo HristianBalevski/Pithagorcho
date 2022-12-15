@@ -28,7 +28,7 @@ def fibonacci_sequence(number):
 
 def convert_radians_to_degrees(number):
     d = number * 180 / pi
-    print(d)
+    print(f'{d:.2f}')
 
 
 def prime_or_not_prime(num):
