@@ -169,7 +169,7 @@ while True:
             divide(a, b)
 
         elif player == '9':
-            print('Please enter two positive numbers. The second number must to be greater than the first!')
+            print('Please enter two positive numbers greater than 0. The second number must to be greater than the first!')
             x = float(input('Please enter a number: '))
             y = float(input('Please enter a number:'))
 
