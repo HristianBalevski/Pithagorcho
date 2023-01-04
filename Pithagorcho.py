@@ -99,11 +99,8 @@ def divide(num1, num2):
 # If we have to calculate percent of a number, divide the number by the whole and multiply by 100.
 def convert_to_percent(n1, n2):
 
-    if n1 >= n2 or n1 <= 0 or n2 <= 0:
-        invalid_input()
-    else:
-        result = ((n1 * 25) / (n2 * 25)) * 100
-        print(f'{result}%')
+    result = ((n1 * 25) / (n2 * 25)) * 100
+    print(f'{result}%')
 
 
 print('Hello, I am Pithagocrho and I am here to help you!')
@@ -166,12 +163,21 @@ while True:
             a = float(input('Please enter a number: '))
             b = float(input('Please enter a number: '))
 
+            if b == 0:
+                while b == 0:
+                    b = float(input('Your second number can not be 0. Please try again: '))
             divide(a, b)
 
         elif player == '9':
-            print('Please enter two positive numbers greater than 0. The second number must to be greater than the first!')
+            print('Please enter two positive numbers greater than 0. The second number must be greater than the first!')
             x = float(input('Please enter a number: '))
             y = float(input('Please enter a number:'))
+
+            if x >= y or x <= 0 or y <= 0:
+                while x >= y or x <= 0 or y <= 0:
+                    print('Wrong input! Please try again')
+                    x = float(input('Please enter a number: '))
+                    y = float(input('Please enter a number:'))
 
             convert_to_percent(x, y)
 
@@ -182,12 +188,14 @@ while True:
             invalid_input()
 
         next_calculation = input("Let's do next calculation? (yes/no): ")
+
         if next_calculation == 'yes':
             continue
         elif next_calculation == "no":
             break
         else:
-            invalid_input()
-            break
+            while next_calculation != 'yes' and next_calculation != 'no':
+                next_calculation = input('Please, choose (yes or no): ')
+
     else:
         invalid_input()
